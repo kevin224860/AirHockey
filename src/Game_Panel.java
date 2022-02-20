@@ -3,9 +3,6 @@ import java.awt.*;
 
 import java.awt.event.*;
 
-import javax.swing.*;
-
-import java.util.Random;
 
 public class Game_Panel extends JPanel implements Runnable {
     static final int SCREEN_WIDTH = 480;
@@ -65,6 +62,7 @@ public class Game_Panel extends JPanel implements Runnable {
         opponent.draw(g);
         puck.draw(g);
         score.draw(g);
+
 
     }
 
@@ -172,14 +170,12 @@ public class Game_Panel extends JPanel implements Runnable {
             System.out.println("point awarded to red");
             new Music("Music/score.wav").playBallCollision();
             score.opponentScore++;
-            Thread.sleep(100);
             newPuck();
         }
         if(puck.y <= 0){
             System.out.println("point awarded to blue");
             new Music("Music/score.wav").playBallCollision();
             score.playerScore++;
-            Thread.sleep(100);
             newPuck();
         }
     }

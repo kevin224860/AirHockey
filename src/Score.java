@@ -18,5 +18,6 @@ public class Score {
 
         g.drawString(String.valueOf(playerScore), SCREEN_WIDTH - 50, SCREEN_HEIGHT -5);
         g.drawString(String.valueOf(opponentScore), SCREEN_WIDTH - 50, 50);
+
     }
 }

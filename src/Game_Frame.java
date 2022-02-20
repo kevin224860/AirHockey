@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Game_Frame extends JFrame {
-    Music music;
     Game_Panel panel;
     Game_Frame(){
 
