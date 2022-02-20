@@ -90,10 +90,7 @@ public class Game_Panel extends JPanel implements Runnable {
     }
 
     public void checkPuckX(){
-
-        System.out.println(puck.x);
         if(puck.x - 50 < opponent.x){
-            //System.out.println("puck.x < opponent.x");
             opponent.setXDirection(-opponent.speed);
 
         }
@@ -102,7 +99,6 @@ public class Game_Panel extends JPanel implements Runnable {
         }
 
         if(puck.x + 10 == opponent.x){
-            //System.out.println("puck.x < opponent.x");
             opponent.setXDirection(0);
 
         }
@@ -127,12 +123,10 @@ public class Game_Panel extends JPanel implements Runnable {
 
         if(opponent.x >= SCREEN_WIDTH - PLAYER_WIDTH){
             opponent.x = SCREEN_WIDTH - PLAYER_WIDTH;
-            //opponent.x = SCREEN_WIDTH ;
-            System.out.println("out of screen");
+
         }
 
         // prevents puck from going out of bounds
-
         if(puck.x <=0 || puck.x >= SCREEN_WIDTH - puckDiameter){
             new Music("Music/collide.wav").playBallCollision();
             puck.setXDirection(-puck.xVelocity);
@@ -167,13 +161,11 @@ public class Game_Panel extends JPanel implements Runnable {
 
         // scores
         if(puck.y >= SCREEN_HEIGHT - puckDiameter){
-            System.out.println("point awarded to red");
             new Music("Music/score.wav").playBallCollision();
             score.opponentScore++;
             newPuck();
         }
         if(puck.y <= 0){
-            System.out.println("point awarded to blue");
             new Music("Music/score.wav").playBallCollision();
             score.playerScore++;
             newPuck();
