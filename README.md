@@ -1,6 +1,7 @@
 # AirHockey
+Air hockey game built with java swing.  
 
-Sources for music :
+#Sources for music :
 
 background.wav ("8 Bit Adventure" by David Renda)
 https://www.fesliyanstudios.com/royalty-free-music/download/8-bit-adventure/2282
